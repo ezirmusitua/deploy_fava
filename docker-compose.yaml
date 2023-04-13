@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  beancount:
+    container_name: fava
+    image: fava
+    ports:
+      - "5000:5000"
+    environment:
+      - BEANCOUNT_FILE=/data/books/main.book
+    volumes:
+      - /src/beancount/.artifacts/books:/data/books
